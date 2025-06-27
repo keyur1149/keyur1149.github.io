@@ -1,0 +1,81 @@
+
+{
+  "personal": {
+    "name": "Keyur Jivani",
+    "title": "Full Stack Developer",
+    "bio": "Passionate software developer with expertise in modern web technologies. I love creating elegant solutions to complex problems and building applications that make a difference.",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    "email": "keyur@example.com",
+    "phone": "+1 (555) 123-4567",
+    "location": "San Francisco, CA",
+    "linkedinUrl": "https://www.linkedin.com/in/keyurjivani"
+  },
+  "skills": [
+    "Angular", "React", "TypeScript", "JavaScript", "Node.js", "Python",
+    "AWS", "Docker", "MongoDB", "PostgreSQL", "GraphQL", "REST APIs"
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "company": "Tech Innovations Inc.",
+      "position": "Senior Full Stack Developer",
+      "startDate": "2022-01",
+      "endDate": "Present",
+      "description": "Led development of enterprise web applications using Angular and Node.js. Mentored junior developers and implemented CI/CD pipelines."
+    },
+    {
+      "id": 2,
+      "company": "Digital Solutions LLC",
+      "position": "Frontend Developer",
+      "startDate": "2020-06",
+      "endDate": "2021-12",
+      "description": "Built responsive web applications using React and TypeScript. Collaborated with design teams to implement pixel-perfect UI components."
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "E-Commerce Platform",
+      "description": "A full-stack e-commerce solution with React frontend and Node.js backend",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
+      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+      "githubUrl": "https://github.com/keyurjivani/ecommerce-platform",
+      "liveUrl": "https://demo-ecommerce.example.com"
+    },
+    {
+      "id": 2,
+      "title": "Task Management App",
+      "description": "A collaborative task management application with real-time updates",
+      "technologies": ["Angular", "Firebase", "TypeScript", "Material UI"],
+      "image": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
+      "githubUrl": "https://github.com/keyurjivani/task-manager",
+      "liveUrl": "https://taskmanager.example.com"
+    },
+    {
+      "id": 3,
+      "title": "Weather Dashboard",
+      "description": "A responsive weather dashboard with location-based forecasts",
+      "technologies": ["React", "TypeScript", "OpenWeather API", "Chart.js"],
+      "image": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
+      "githubUrl": "https://github.com/keyurjivani/weather-dashboard",
+      "liveUrl": "https://weather-dash.example.com"
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "institution": "University of California, Berkeley",
+      "degree": "Bachelor of Science in Computer Science",
+      "startDate": "2016-09",
+      "endDate": "2020-05",
+      "gpa": "3.8/4.0"
+    }
+  ],
+  "social": {
+    "github": "https://github.com/keyurjivani",
+    "linkedin": "https://www.linkedin.com/in/keyurjivani",
+    "twitter": "https://twitter.com/keyurjivani",
+    "email": "keyur@example.com"
+  },
+  "techStack": ["React", "TypeScript", "Tailwind CSS", "Vite", "JSON", "React Router"]
+}
