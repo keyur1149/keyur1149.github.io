@@ -6,7 +6,7 @@ import portfolioData from '../data/portfolio.json';
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const { personal, skills, techStack } = portfolioData;
+  const { personal, skills } = portfolioData;
 
   useEffect(() => {
     setIsVisible(true);
@@ -104,21 +104,6 @@ const Home = () => {
                   {skill}
                 </span>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Tech Stack */}
-        <div className={`mt-16 text-center transition-all duration-1000 delay-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <p className="text-gray-600 dark:text-gray-400 mb-4">Built with:</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            {techStack.map((tech) => (
-              <span
-                key={tech}
-                className="px-4 py-2 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-800 dark:text-blue-300 rounded-full text-sm font-medium"
-              >
-                {tech}
-              </span>
             ))}
           </div>
         </div>

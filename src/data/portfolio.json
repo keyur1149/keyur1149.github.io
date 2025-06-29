@@ -1,81 +1,81 @@
-
 {
-  "personal": {
-    "name": "Keyur Jivani",
-    "title": "Full Stack Developer",
-    "bio": "Passionate software developer with expertise in modern web technologies. I love creating elegant solutions to complex problems and building applications that make a difference.",
-    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-    "email": "keyur@example.com",
-    "phone": "+1 (555) 123-4567",
-    "location": "San Francisco, CA",
-    "linkedinUrl": "https://www.linkedin.com/in/keyurjivani"
-  },
-  "skills": [
-    "Angular", "React", "TypeScript", "JavaScript", "Node.js", "Python",
-    "AWS", "Docker", "MongoDB", "PostgreSQL", "GraphQL", "REST APIs"
-  ],
-  "experience": [
-    {
-      "id": 1,
-      "company": "Tech Innovations Inc.",
-      "position": "Senior Full Stack Developer",
-      "startDate": "2022-01",
-      "endDate": "Present",
-      "description": "Led development of enterprise web applications using Angular and Node.js. Mentored junior developers and implemented CI/CD pipelines."
+    "personal": {
+        "name": "Keyur Jivani",
+        "title": "Full Stack Developer",
+        "bio": "Results-driven Full Stack Developer with a strong foundation in software engineering and a passion for building modern, user-centric web applications. Skilled in crafting scalable solutions, solving complex problems, and adapting quickly to new technologies. Brings a proactive mindset and a focus on continuous learning to every team environment.",
+        "image": "./keyur_pic.jpg",
+        "email": "keyurpatel1149@gmail.com",
+        "phone": "+91 8141351199",
+        "location": "Ahmedabad, Gujarat, India",
+        "linkedinUrl": "https://www.linkedin.com/in/keyurjivani"
     },
-    {
-      "id": 2,
-      "company": "Digital Solutions LLC",
-      "position": "Frontend Developer",
-      "startDate": "2020-06",
-      "endDate": "2021-12",
-      "description": "Built responsive web applications using React and TypeScript. Collaborated with design teams to implement pixel-perfect UI components."
+    "skills": [
+        "Angular",
+        "TypeScript",
+        "JavaScript",
+        "Node.js",
+        "Python",
+        "AWS",
+        "Docker",
+        "PostgreSQL",
+        ".Net Core",
+        "MsSql",
+        "SQL"
+    ],
+    "experience": [{
+            "id": 1,
+            "company": "TatvaSoft",
+            "position": "Software Developer",
+            "location": "Ahmedabad, Gujarat, India",
+            "startDate": "2024-07",
+            "endDate": "Present",
+            "description": "Developed scalable SaaS and on-premises enterprise applications using modern web frameworks, RESTful APIs, and relational databases. Designed and implemented multi-tenant architecture with client-specific configuration panels. Used Dapper ORM with stored procedures for high-performance data access. Managed IIS deployments and environment-specific configurations. Implemented role-based access control (RBAC). Participated in Scrum ceremonies including planning, stand-ups, demos, and retrospectives."
+        },
+        {
+            "id": 2,
+            "company": "TatvaSoft",
+            "position": "Software Developer Trainee",
+            "location": "Ahmedabad, Gujarat, India",
+            "startDate": "2024-01",
+            "endDate": "2024-06",
+            "description": "Developed a healthcare service platform using ASP.NET Core MVC, ORM tools, and PostgreSQL. Built modules for patient requests, doctor scheduling, and admin management. Applied Entity Framework Code First for database modeling, migrations, and schema management. Collaborated in an Agile Scrum team focusing on clean code and continuous delivery."
+        }
+    ],
+    "projects": [{
+            "id": 1,
+            "title": "Accounting & Inventory Management System",
+            "technologies": [
+                "Angular",
+                ".NET Core WebAPI",
+                "SQL Server",
+                "Dapper",
+                "SFTP"
+            ],
+            "description": "Engineered a robust multi-tenant platform for SaaS and on-premise models, adopted by 100% of clients. Streamlined core modules including accounting, inventory, and loyalty programs, handling 90% of client operations. Optimized SQL operations using Dapper with stored procedures, improving backend performance by 5%. Integrated SFTP-based file management for upload, storage, and retrieval—eliminated server-side auto-sync logic, improving file handling performance by 30%. Reduced server CPU load by 10% and improved response time by 30% using async operations. Integrated linting and static analysis tools in Angular and .NET, increasing maintainability by 10% and developer-friendliness by 30%. Upgraded tech stack from .NET Core 3.1 to .NET 8 and Angular 8 to Angular 16. Deployed Angular Web Workers and Inline Workers to improve UI responsiveness by 30%."
+        },
+        {
+            "id": 2,
+            "title": "Healthcare Portal",
+            "technologies": [".NET Core MVC", "PostgreSQL", "Entity Framework"],
+            "description": "Developed and deployed role-based access modules for patients, doctors, and admins, improving workflow efficiency by 25%. Integrated secure login and consultation workflows aligned with healthcare compliance standards. Utilized Entity Framework (Database First) for efficient schema mapping and database operations. Optimized data handling by improving stored procedures, reducing query execution time by 10%."
+        },
+        {
+            "id": 3,
+            "title": "Employee Learning Management System (SaaS)",
+            "technologies": ["Angular", ".NET Core WebAPI", "PostgreSQL", "EF Core"],
+            "description": "Built scalable modules for course management, training tracking, and reading time analytics—enhancing learning insights by 30%. Architected a multi-tenant system ensuring secure company-wise data isolation. Reduced API calls and improved backend performance by 5% through query optimization. Added Angular Inline Web Workers to process complex tasks in the background, reducing UI freezing by 10%. Followed Agile/Scrum methodologies with 90% on-time sprint completion."
+        }
+    ],
+    "education": [{
+        "id": 1,
+        "institution": "Dharmsinh Desai University, Nadiad",
+        "degree": "Bachelor of Technology in Computer Engineering",
+        "startDate": "2020",
+        "endDate": "2024"
+    }],
+    "social": {
+        "github": "https://github.com/keyur1149",
+        "linkedin": "https://www.linkedin.com/in/keyurjivani",
+        "email": "keyurpatel1149@gmail.com"
     }
-  ],
-  "projects": [
-    {
-      "id": 1,
-      "title": "E-Commerce Platform",
-      "description": "A full-stack e-commerce solution with React frontend and Node.js backend",
-      "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
-      "image": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      "githubUrl": "https://github.com/keyurjivani/ecommerce-platform",
-      "liveUrl": "https://demo-ecommerce.example.com"
-    },
-    {
-      "id": 2,
-      "title": "Task Management App",
-      "description": "A collaborative task management application with real-time updates",
-      "technologies": ["Angular", "Firebase", "TypeScript", "Material UI"],
-      "image": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      "githubUrl": "https://github.com/keyurjivani/task-manager",
-      "liveUrl": "https://taskmanager.example.com"
-    },
-    {
-      "id": 3,
-      "title": "Weather Dashboard",
-      "description": "A responsive weather dashboard with location-based forecasts",
-      "technologies": ["React", "TypeScript", "OpenWeather API", "Chart.js"],
-      "image": "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=600&h=400&fit=crop",
-      "githubUrl": "https://github.com/keyurjivani/weather-dashboard",
-      "liveUrl": "https://weather-dash.example.com"
-    }
-  ],
-  "education": [
-    {
-      "id": 1,
-      "institution": "University of California, Berkeley",
-      "degree": "Bachelor of Science in Computer Science",
-      "startDate": "2016-09",
-      "endDate": "2020-05",
-      "gpa": "3.8/4.0"
-    }
-  ],
-  "social": {
-    "github": "https://github.com/keyurjivani",
-    "linkedin": "https://www.linkedin.com/in/keyurjivani",
-    "twitter": "https://twitter.com/keyurjivani",
-    "email": "keyur@example.com"
-  },
-  "techStack": ["React", "TypeScript", "Tailwind CSS", "Vite", "JSON", "React Router"]
 }

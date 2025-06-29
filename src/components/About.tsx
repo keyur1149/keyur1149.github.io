@@ -98,7 +98,6 @@ const About = () => {
                     </p>
                     <div className="flex justify-between items-center text-sm text-gray-600 dark:text-gray-400">
                       <span>{new Date(edu.startDate).getFullYear()} - {new Date(edu.endDate).getFullYear()}</span>
-                      <span>GPA: {edu.gpa}</span>
                     </div>
                   </div>
                 ))}
