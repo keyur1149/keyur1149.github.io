@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Mail, ArrowRight } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowRight, Briefcase } from 'lucide-react';
 import portfolioData from '../data/portfolio.json';
 
 const Home = () => {
@@ -39,6 +39,13 @@ const Home = () => {
               >
                 View My Work
                 <ArrowRight className="ml-2" size={16} />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+              >
+                <Briefcase className="mr-2" size={16} />
+                Our Services
               </Link>
               <Link
                 to="/contact"
