@@ -50,8 +50,8 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="text-center mb-16">
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Services</span>
+            <h1 className="text-4xl lg:text-5xl font-bold text-black dark:text-white mb-6">
+              Our <span className="text-black dark:text-white">Services</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
               We specialize in creating innovative digital solutions that help businesses grow and succeed in today's competitive market.

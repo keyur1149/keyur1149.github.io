@@ -13,6 +13,7 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import NotFound from "./pages/NotFound";
+import portfolioData from "./data/portfolio.json";
 
 const queryClient = new QueryClient();
 
@@ -28,7 +29,7 @@ const App = () => (
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
+              {portfolioData.showServices && <Route path="/services" element={<Services />} />}
               <Route path="/projects" element={<Projects />} />
               <Route path="/experience" element={<Experience />} />
               <Route path="/contact" element={<Contact />} />

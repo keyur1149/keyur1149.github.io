@@ -6,11 +6,14 @@ import portfolioData from '../data/portfolio.json';
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const { personal, skills } = portfolioData;
+  const { personal, skills, showServices } = portfolioData;
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
+
+  const currentBio = showServices ? personal.companyBio : personal.bio;
+  const currentTitle = showServices ? "IT Solutions & Development" : personal.title;
 
   return (
     <div className="min-h-screen pt-16 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
@@ -25,10 +28,10 @@ const Home = () => {
               </span>
             </h1>
             <h2 className="text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 mb-6">
-              {personal.title}
+              {currentTitle}
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-              {personal.bio}
+              {currentBio}
             </p>
             
             {/* CTA Buttons */}
@@ -40,13 +43,15 @@ const Home = () => {
                 View My Work
                 <ArrowRight className="ml-2" size={16} />
               </Link>
-              <Link
-                to="/services"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-              >
-                <Briefcase className="mr-2" size={16} />
-                Our Services
-              </Link>
+              {showServices && (
+                <Link
+                  to="/services"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  <Briefcase className="mr-2" size={16} />
+                  Our Services
+                </Link>
+              )}
               <Link
                 to="/contact"
                 className="inline-flex items-center px-6 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 font-medium rounded-lg hover:bg-blue-600 hover:text-white dark:hover:text-white transition-all duration-300"

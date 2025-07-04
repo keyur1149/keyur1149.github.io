@@ -2,20 +2,29 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
+import portfolioData from '../data/portfolio.json';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
 
-  const navItems = [
+  const baseNavItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
+  ];
+
+  const servicesItem = { name: 'Services', path: '/services' };
+  
+  const endNavItems = [
     { name: 'Projects', path: '/projects' },
     { name: 'Experience', path: '/experience' },
     { name: 'Contact', path: '/contact' },
   ];
+
+  const navItems = portfolioData.showServices 
+    ? [...baseNavItems, servicesItem, ...endNavItems]
+    : [...baseNavItems, ...endNavItems];
 
   const isActive = (path: string) => location.pathname === path;
 
