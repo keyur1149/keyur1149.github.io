@@ -89,7 +89,7 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-black dark:text-white mb-6">
-              Our <span className="text-blue-600 dark:text-blue-400">Expertise</span>
+              Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Expertise</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
               Comprehensive digital solutions crafted with precision and powered by cutting-edge technology.
@@ -131,16 +131,6 @@ const Services = () => {
                       </li>
                     ))}
                   </ul>
-
-                  <div className="mt-8">
-                    <Button 
-                      variant="ghost" 
-                      className="group/btn text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium p-0"
-                    >
-                      Learn More
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
-                    </Button>
-                  </div>
                 </CardContent>
               </Card>
             ))}
