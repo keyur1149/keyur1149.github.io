@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Code, Globe, Smartphone, ArrowRight, CheckCircle, Zap, Shield, Layers, Sparkles } from 'lucide-react';
 import { Button } from './ui/button';
@@ -73,21 +72,13 @@ const Services = () => {
               Explore our tailored services designed to fuel innovation and scale businesses globally.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                Explore Services
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="px-8 py-4 text-lg font-medium border-2 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300"
-              >
-                View Portfolio
-              </Button>
+            <div className="text-center">
+              <p className="text-lg text-gray-700 dark:text-gray-300 mb-4 font-medium">
+                Trusted by innovative companies worldwide
+              </p>
+              <p className="text-base text-gray-600 dark:text-gray-400">
+                Experience excellence in every project we deliver
+              </p>
             </div>
           </div>
         </div>
@@ -180,22 +171,20 @@ const Services = () => {
             Let's turn your ideas into scalable digital products that drive real business results.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg"
-              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl"
-            >
-              <Shield className="mr-2 w-5 h-5" />
-              Get a Free Consultation
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm px-8 py-4 text-lg font-medium transition-all duration-300"
-            >
-              <Layers className="mr-2 w-5 h-5" />
-              View Case Studies
-            </Button>
+          <div className="text-center">
+            <p className="text-lg text-white/90 mb-4 font-medium">
+              Start your digital transformation journey today
+            </p>
+            <div className="flex justify-center items-center gap-6">
+              <div className="flex items-center text-white/80">
+                <Shield className="w-5 h-5 mr-2" />
+                <span className="text-sm">Free Consultation</span>
+              </div>
+              <div className="flex items-center text-white/80">
+                <Layers className="w-5 h-5 mr-2" />
+                <span className="text-sm">Expert Guidance</span>
+              </div>
+            </div>
           </div>
 
           <div className="mt-12 text-white/80">
