@@ -11,7 +11,7 @@
         "location": "Ahmedabad, Gujarat, India",
         "linkedinUrl": "https://www.linkedin.com/in/keyurjivani"
     },
-    "showServices": true,
+    "showServices": false,
     "skills": [
         "Angular",
         "TypeScript",
