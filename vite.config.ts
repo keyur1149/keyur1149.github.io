@@ -11,8 +11,9 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
- plugins: [
+  plugins: [
     react(),
+    mode === 'development' && componentTagger(),
     {
       name: "copy-index-to-404",
       closeBundle: () => {
@@ -24,7 +25,7 @@ export default defineConfig(({ mode }) => ({
         }
       },
     },
-  ],
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
