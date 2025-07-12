@@ -1,11 +1,10 @@
-
 {
     "personal": {
         "name": "Keyur Jivani",
         "title": "Full Stack Developer",
         "bio": "Results-driven Full Stack Developer with a strong foundation in software engineering and a passion for building modern, user-centric web applications. Skilled in crafting scalable solutions, solving complex problems, and adapting quickly to new technologies. Brings a proactive mindset and a focus on continuous learning to every team environment.",
         "companyBio": "Welcome to our innovative IT company! We specialize in delivering cutting-edge software solutions that transform businesses and drive digital growth. Our expert team combines technical excellence with creative problem-solving to build scalable, modern applications that exceed expectations.",
-        "image": "./keyur_pic.jpg",
+        "image": "/keyur_pic.jpg",
         "email": "keyurpatel1149@gmail.com",
         "phone": "+91 8141351199",
         "location": "Ahmedabad, Gujarat, India",
