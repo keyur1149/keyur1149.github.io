@@ -1,6 +1,41 @@
 import React from 'react';
 
 const AnimatedBackground: React.FC = () => {
+  // Code snippets for the floating animation
+  const codeSnippets = [
+    'const app = () => {}',
+    'function render() {',
+    'useState(false)',
+    'useEffect(() => {',
+    'return <div>',
+    'import React from',
+    'export default',
+    'className="flex"',
+    'onClick={handler}',
+    'const [state] =',
+    'async function',
+    'await fetch()',
+    'map((item) =>',
+    'filter(Boolean)',
+    'reduce((acc) =>',
+    'props: {',
+    'type: string',
+    'interface Props',
+    'extends Component',
+    'this.setState()',
+    '<Component />',
+    'style={{ color:',
+    'position: absolute',
+    'display: flex',
+    'justify-content:',
+    'align-items:',
+    'background: linear',
+    'transform: scale',
+    'transition: all',
+    'animation: fade',
+    'keyframes slide'
+  ];
+
   return (
     <div className="absolute inset-0 overflow-hidden -z-10">
       {/* Animated Gradient Background */}
@@ -49,11 +84,30 @@ const AnimatedBackground: React.FC = () => {
         />
       </svg>
       
+      {/* Floating Code Snippets */}
+      <div className="absolute inset-0 pointer-events-none">
+        {codeSnippets.slice(0, 15).map((snippet, i) => (
+          <div
+            key={`code-${i}`}
+            className="absolute text-xs sm:text-sm font-mono text-blue-600/40 dark:text-blue-400/30 whitespace-nowrap animate-code-float select-none"
+            style={{
+              left: `${Math.random() * 90}%`,
+              top: `${Math.random() * 90}%`,
+              animationDelay: `${Math.random() * 10}s`,
+              animationDuration: `${8 + Math.random() * 6}s`,
+              transform: `rotate(${Math.random() * 20 - 10}deg)`,
+            }}
+          >
+            {snippet}
+          </div>
+        ))}
+      </div>
+      
       {/* Floating Particles */}
       <div className="absolute inset-0">
-        {[...Array(12)].map((_, i) => (
+        {[...Array(8)].map((_, i) => (
           <div
-            key={i}
+            key={`particle-${i}`}
             className="absolute w-2 h-2 bg-blue-400/20 dark:bg-blue-300/10 rounded-full animate-float"
             style={{
               left: `${Math.random() * 100}%`,
