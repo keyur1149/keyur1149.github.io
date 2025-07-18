@@ -52,9 +52,14 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
+                  <ul className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed space-y-2">
+                    {project.description.split('.').filter(point => point.trim()).map((point, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="inline-block w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <span>{point.trim()}.</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
