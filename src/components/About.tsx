@@ -21,7 +21,7 @@ const About = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Profile Image */}
-            <div className="lg:col-span-1">
+            <div className="lg:col-span-1 space-y-6">
               <div className="relative">
                 <img
                   src={personal.image}
@@ -29,6 +29,18 @@ const About = () => {
                   className="w-full rounded-2xl shadow-2xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent rounded-2xl"></div>
+              </div>
+              
+              {/* Experience Highlight */}
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg animate-fade-in">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                    1+ Years
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm font-medium">
+                    Professional Experience
+                  </p>
+                </div>
               </div>
             </div>
 
