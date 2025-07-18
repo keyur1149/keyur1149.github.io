@@ -1,39 +1,82 @@
 import React from 'react';
 
 const AnimatedBackground: React.FC = () => {
-  // Code snippets for the floating animation
-  const codeSnippets = [
-    'const app = () => {}',
-    'function render() {',
-    'useState(false)',
-    'useEffect(() => {',
-    'return <div>',
-    'import React from',
-    'export default',
-    'className="flex"',
-    'onClick={handler}',
-    'const [state] =',
-    'async function',
-    'await fetch()',
-    'map((item) =>',
-    'filter(Boolean)',
-    'reduce((acc) =>',
-    'props: {',
-    'type: string',
-    'interface Props',
-    'extends Component',
-    'this.setState()',
-    '<Component />',
-    'style={{ color:',
-    'position: absolute',
-    'display: flex',
-    'justify-content:',
-    'align-items:',
-    'background: linear',
-    'transform: scale',
-    'transition: all',
-    'animation: fade',
-    'keyframes slide'
+  const techQuotes = [
+    // Programming Logic
+    'if (success) { continue; }',
+    'while (learning) { grow(); }',
+    'try { innovate(); } catch { adapt(); }',
+    'const future = async () => {}',
+    'function deploy() { return success; }',
+    'let experience = [];',
+    'const skills = new Set();',
+    'export default passion;',
+    'import { creativity } from "mind";',
+    'setState({ motivated: true });',
+    
+    // AWS Services
+    'AWS Lambda',
+    'EC2 Instance',
+    'S3 Bucket',
+    'CloudFormation',
+    'API Gateway',
+    'DynamoDB',
+    'CloudWatch',
+    'VPC Network',
+    'IAM Roles',
+    'Route 53',
+    'ECS Container',
+    'RDS Database',
+    'ElastiCache',
+    'SNS Topics',
+    
+    // Technologies & Tools
+    'TypeScript',
+    'React.useState()',
+    'Docker Container',
+    'Kubernetes Pod',
+    'GraphQL Query',
+    'Node.js Server',
+    'PostgreSQL',
+    'MongoDB Atlas',
+    'Redis Cache',
+    'Nginx Proxy',
+    'Jest Testing',
+    'GitHub Actions',
+    'CI/CD Pipeline',
+    'Microservices',
+    
+    // Code Commands
+    'npm install success',
+    'git commit -m "innovation"',
+    'docker run --rm app',
+    'kubectl apply -f future',
+    'yarn build production',
+    'terraform apply',
+    'ansible-playbook deploy',
+    'helm install release',
+    
+    // SQL & Database
+    'SELECT * FROM opportunities',
+    'INSERT INTO future VALUES',
+    'UPDATE skills SET level = "expert"',
+    'CREATE TABLE innovations',
+    'COMMIT TRANSACTION',
+    'INDEX ON performance',
+    'JOIN experiences ON success',
+    'WHERE passion = true',
+    
+    // Development Concepts
+    'RESTful API',
+    'Serverless Functions',
+    'Event-Driven Architecture',
+    'Domain-Driven Design',
+    'Test-Driven Development',
+    'Continuous Integration',
+    'Infrastructure as Code',
+    'Blue-Green Deployment',
+    'Circuit Breaker Pattern',
+    'API Rate Limiting'
   ];
 
   return (
@@ -86,7 +129,7 @@ const AnimatedBackground: React.FC = () => {
       
       {/* Floating Code Snippets */}
       <div className="absolute inset-0 pointer-events-none">
-        {codeSnippets.slice(0, 15).map((snippet, i) => (
+        {techQuotes.slice(0, 15).map((snippet, i) => (
           <div
             key={`code-${i}`}
             className="absolute text-xs sm:text-sm font-mono text-blue-600/40 dark:text-blue-400/30 whitespace-nowrap animate-code-float select-none"
