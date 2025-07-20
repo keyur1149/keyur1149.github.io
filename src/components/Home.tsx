@@ -105,61 +105,85 @@ const Home = () => {
         {/* Skills Section */}
         <div className={`mt-20 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-            Technical Arsenal
+            Technical Skills
           </h3>
           
-          {/* Skills Grid with Enhanced Design */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {skills.map((skill, index) => (
-              <div
-                key={skill}
-                className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 border border-gray-200/50 dark:border-gray-700/50"
-                style={{ animationDelay: `${index * 150}ms` }}
-              >
-                {/* Skill Icon/Background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
-                {/* Skill Content */}
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-lg font-semibold text-gray-800 dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
-                      {skill}
-                    </span>
-                    <div className="w-3 h-3 bg-green-500 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
-                  
-                  {/* Progress Bar */}
-                  <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-3">
-                    <div 
-                      className="bg-gradient-to-r from-blue-500 to-purple-600 h-2 rounded-full transition-all duration-1000 delay-300"
-                      style={{ 
-                        width: `${Math.floor(Math.random() * 25) + 70}%`,
-                        animationDelay: `${index * 200 + 500}ms`
-                      }}
-                    />
-                  </div>
-                  
-                  {/* Experience Level */}
-                  <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">
-                    {index < 3 ? 'Expert' : index < 6 ? 'Advanced' : 'Proficient'}
+          {/* Skills Categories */}
+          <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            {/* Frontend */}
+            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+              <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                <span className="w-3 h-3 bg-blue-500 rounded-full mr-3"></span>
+                Frontend
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {['Angular', 'TypeScript', 'JavaScript'].map((skill) => (
+                  <span key={skill} className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">
+                    {skill}
                   </span>
-                </div>
-                
-                {/* Floating Effect on Hover */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+                ))}
               </div>
-            ))}
-          </div>
-          
-          {/* Bottom CTA */}
-          <div className="text-center mt-12">
-            <p className="text-gray-600 dark:text-gray-400 mb-6">
-              Continuously expanding my skillset and embracing new technologies
-            </p>
-            <div className="inline-flex items-center space-x-2 text-blue-600 dark:text-blue-400 font-medium">
-              <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
-              <span>Always Learning</span>
-              <span className="w-2 h-2 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }}></span>
+            </div>
+
+            {/* Backend */}
+            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+              <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                <span className="w-3 h-3 bg-green-500 rounded-full mr-3"></span>
+                Backend
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {['Node.js', 'Python', '.Net Core'].map((skill) => (
+                  <span key={skill} className="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Database */}
+            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+              <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                <span className="w-3 h-3 bg-purple-500 rounded-full mr-3"></span>
+                Database
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {['PostgreSQL', 'MsSql', 'SQL'].map((skill) => (
+                  <span key={skill} className="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* DevOps & Tools */}
+            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+              <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                <span className="w-3 h-3 bg-orange-500 rounded-full mr-3"></span>
+                DevOps & Tools
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {['AWS', 'Docker'].map((skill) => (
+                  <span key={skill} className="px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full text-sm font-medium">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Concepts */}
+            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50 md:col-span-2 lg:col-span-2">
+              <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
+                <span className="w-3 h-3 bg-pink-500 rounded-full mr-3"></span>
+                Concepts & Methodologies
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {['RESTful APIs', 'Microservices', 'Agile Development', 'Version Control (Git)', 'CI/CD'].map((skill) => (
+                  <span key={skill} className="px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 rounded-full text-sm font-medium">
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
