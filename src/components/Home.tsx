@@ -110,63 +110,37 @@ const Home = () => {
           
           {/* Skills Categories */}
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {(() => {
-              // Categorize skills from portfolio.json
-              const skillCategories = {
-                Frontend: skills.filter(skill => ['Angular', 'TypeScript', 'JavaScript'].includes(skill)),
-                Backend: skills.filter(skill => ['Node.js', 'Python', '.Net Core'].includes(skill)),
-                Database: skills.filter(skill => ['PostgreSQL', 'MsSql', 'SQL'].includes(skill)),
-                'DevOps & Tools': skills.filter(skill => ['AWS', 'Docker'].includes(skill))
-              };
-
+            {Object.entries(skills).map(([category, categorySkills]) => {
               const categoryColors = {
                 Frontend: { bg: 'bg-blue-100 dark:bg-blue-900/30', text: 'text-blue-700 dark:text-blue-300', dot: 'bg-blue-500' },
                 Backend: { bg: 'bg-green-100 dark:bg-green-900/30', text: 'text-green-700 dark:text-green-300', dot: 'bg-green-500' },
                 Database: { bg: 'bg-purple-100 dark:bg-purple-900/30', text: 'text-purple-700 dark:text-purple-300', dot: 'bg-purple-500' },
-                'DevOps & Tools': { bg: 'bg-orange-100 dark:bg-orange-900/30', text: 'text-orange-700 dark:text-orange-300', dot: 'bg-orange-500' }
+                'DevOps & Tools': { bg: 'bg-orange-100 dark:bg-orange-900/30', text: 'text-orange-700 dark:text-orange-300', dot: 'bg-orange-500' },
+                Concepts: { bg: 'bg-pink-100 dark:bg-pink-900/30', text: 'text-pink-700 dark:text-pink-300', dot: 'bg-pink-500' }
               };
 
-              return Object.entries(skillCategories).map(([category, categorySkills]) => (
-                <div key={category} className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50">
+              const colors = categoryColors[category] || categoryColors.Concepts;
+              const isLargeCategory = category === 'Concepts' && categorySkills.length > 3;
+
+              return (
+                <div 
+                  key={category} 
+                  className={`bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50 ${isLargeCategory ? 'md:col-span-2 lg:col-span-2' : ''}`}
+                >
                   <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                    <span className={`w-3 h-3 ${categoryColors[category].dot} rounded-full mr-3`}></span>
+                    <span className={`w-3 h-3 ${colors.dot} rounded-full mr-3`}></span>
                     {category}
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {categorySkills.map((skill) => (
-                      <span key={skill} className={`px-3 py-1 ${categoryColors[category].bg} ${categoryColors[category].text} rounded-full text-sm font-medium`}>
+                      <span key={skill} className={`px-3 py-1 ${colors.bg} ${colors.text} rounded-full text-sm font-medium`}>
                         {skill}
                       </span>
                     ))}
                   </div>
                 </div>
-              ));
-            })()}
-
-            {/* Additional Skills */}
-            {(() => {
-              const categorizedSkills = ['Angular', 'TypeScript', 'JavaScript', 'Node.js', 'Python', '.Net Core', 'PostgreSQL', 'MsSql', 'SQL', 'AWS', 'Docker'];
-              const additionalSkills = skills.filter(skill => !categorizedSkills.includes(skill));
-              
-              if (additionalSkills.length > 0) {
-                return (
-                  <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 shadow-lg border border-gray-200/50 dark:border-gray-700/50 md:col-span-2 lg:col-span-2">
-                    <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
-                      <span className="w-3 h-3 bg-pink-500 rounded-full mr-3"></span>
-                      Other Technologies
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {additionalSkills.map((skill) => (
-                        <span key={skill} className="px-3 py-1 bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 rounded-full text-sm font-medium">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                );
-              }
-              return null;
-            })()}
+              );
+            })}
           </div>
         </div>
       </div>

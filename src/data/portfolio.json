@@ -11,19 +11,13 @@
         "linkedinUrl": "https://www.linkedin.com/in/keyurjivani"
     },
     "showServices": false,
-    "skills": [
-        "Angular",
-        "TypeScript",
-        "JavaScript",
-        "Node.js",
-        "Python",
-        "AWS",
-        "Docker",
-        "PostgreSQL",
-        ".Net Core",
-        "MsSql",
-        "SQL"
-    ],
+    "skills": {
+        "Frontend": ["Angular", "TypeScript", "JavaScript"],
+        "Backend": ["Node.js", "Python", ".Net Core"],
+        "Database": ["PostgreSQL", "MsSql", "SQL"],
+        "DevOps & Tools": ["AWS", "Docker"],
+        "Concepts": ["RESTful APIs", "Microservices", "Agile Development", "Version Control (Git)", "CI/CD"]
+    },
     "experience": [{
             "id": 1,
             "company": "TatvaSoft",
