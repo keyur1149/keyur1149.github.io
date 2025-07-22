@@ -62,7 +62,7 @@ const Experience = () => {
                     </div>
                     
                     <ul className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-2">
-                      {exp.description.split('.').filter(point => point.trim()).map((point, index) => (
+                      {exp.description.map((point, index) => (
                         <li key={index} className="flex items-start">
                           <span className="inline-block w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                           <span>{point.trim()}.</span>

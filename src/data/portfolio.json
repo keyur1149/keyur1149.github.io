@@ -13,10 +13,16 @@
     "showServices": false,
     "skills": {
         "Frontend": ["Angular", "TypeScript", "JavaScript"],
-        "Backend": ["Node.js", "Python", ".Net Core"],
+        "Backend": ["Node.js", ".Net Core", "C#", "MAUI Hybrid Blazor App"],
         "Database": ["PostgreSQL", "MsSql", "SQL"],
         "DevOps & Tools": ["AWS", "Docker"],
-        "Concepts": ["RESTful APIs", "Microservices", "Agile Development", "Version Control (Git)", "CI/CD"]
+        "Concepts": [
+            "RESTful APIs",
+            "Microservices",
+            "Agile Development",
+            "Version Control (Git)",
+            "CI/CD"
+        ]
     },
     "experience": [{
             "id": 1,
@@ -25,7 +31,14 @@
             "location": "Ahmedabad, Gujarat, India",
             "startDate": "2024-07",
             "endDate": "Present",
-            "description": "Developed scalable SaaS and on-premises enterprise applications using modern web frameworks, RESTful APIs, and relational databases. Designed and implemented multi-tenant architecture with client-specific configuration panels. Used Dapper ORM with stored procedures for high-performance data access. Managed IIS deployments and environment-specific configurations. Implemented role-based access control (RBAC). Participated in Scrum ceremonies including planning, stand-ups, demos, and retrospectives."
+            "description": [
+                "Developed scalable SaaS and on-premises enterprise applications using modern web frameworks, RESTful APIs, and relational databases.",
+                "Designed and implemented multi-tenant architecture ensuring company-wide data isolation and client-specific configuration panels.",
+                "Utilized Dapper ORM with stored procedures to optimize high-performance data access",
+                "Managed IIS deployments and handled environment-specific configurations across local, testing, and production environments",
+                "Spearheaded role-based access control (RBAC) ensuring secure and modular user permission management",
+                "Participated actively in Scrum ceremonies including sprint planning, daily stand-ups, demo presentations, and retrospectives to review progress, discuss challenges, and identify improvement"
+            ]
         },
         {
             "id": 2,
@@ -34,7 +47,12 @@
             "location": "Ahmedabad, Gujarat, India",
             "startDate": "2024-01",
             "endDate": "2024-06",
-            "description": "Developed a healthcare service platform using ASP.NET Core MVC, ORM tools, and PostgreSQL. Built modules for patient requests, doctor scheduling, and admin management. Applied Entity Framework Code First for database modeling, migrations, and schema management. Collaborated in an Agile Scrum team focusing on clean code and continuous delivery."
+            "description": [
+                "Developed a healthcare service platform using ASP.NET Core MVC, ORM tools, and PostgreSQ database",
+                "Built modules for patient requests, doctor scheduling, and admin management",
+                "Applied Entity Framework Code First for database modeling, migrations, and schema management",
+                "Collaborated within an Agile Scrum team, focusing on clean code practices and continuous delivery"
+            ]
         }
     ],
     "projects": [{
@@ -47,19 +65,39 @@
                 "Dapper",
                 "SFTP"
             ],
-            "description": "Engineered a robust multi-tenant platform for SaaS and on-premise models, adopted by 100% of clients. Streamlined core modules including accounting, inventory, and loyalty programs, handling 90% of client operations. Optimized SQL operations using Dapper with stored procedures, improving backend performance by 5%. Integrated SFTP-based file management for upload, storage, and retrieval—eliminated server-side auto-sync logic, improving file handling performance by 30%. Reduced server CPU load by 10% and improved response time by 30% using async operations. Integrated linting and static analysis tools in Angular and .NET, increasing maintainability by 10% and developer-friendliness by 30%. Upgraded tech stack from .NET Core 3.1 to .NET 8 and Angular 8 to Angular 16. Deployed Angular Web Workers and Inline Workers to improve UI responsiveness by 30%."
+            "description": [
+                "Engineered a robust multi-tenant platform for SaaS and on-premise models, adopted by 100% of clients.",
+                "Streamlined core modules including accounting, inventory, and loyalty programs, handling 90% of client operations.",
+                "Optimized SQL operations using Dapper with stored procedures, improving backend performance by 5%.",
+                "Integrated SFTP-based file management for upload, storage, and retrieval; eliminated server-side auto-sync logic and improved file handling performance by 30%.",
+                "Reduced server CPU load by 10% and improved server response time by 30% through asynchronous operations and resource decoupling.",
+                "Integrated code linting and static analysis tools in Angular and .NET projects, improving code maintainability by 10% and creating a 30% more developer-friendly codebase.",
+                "Upgraded tech stack from .NET Core 3.1 to .NET 8 and Angular 8 to Angular 16, improving maintainability and modern compatibility by 40%.",
+                "Deployed Web Workers and Inline Workers in Angular to offload heavy processing and make UI 30% more responsive and non-blocking."
+            ]
         },
         {
             "id": 2,
             "title": "Healthcare Portal",
             "technologies": [".NET Core MVC", "PostgreSQL", "Entity Framework"],
-            "description": "Developed and deployed role-based access modules for patients, doctors, and admins, improving workflow efficiency by 25%. Integrated secure login and consultation workflows aligned with healthcare compliance standards. Utilized Entity Framework (Database First) for efficient schema mapping and database operations. Optimized data handling by improving stored procedures, reducing query execution time by 10%."
+            "description": [
+                " Developed and deployed role-based access modules for patients, doctors, and admins, improving workflow efficiency by 25%.",
+                "Integrated secure login and consultation workflows aligned with healthcare compliance standards",
+                "Utilized Entity Framework (Database First) for efficient PostgreSQL schema mapping and database operations",
+                "Optimized data handling, reducing query execution time by 10% through stored procedure improvements"
+            ]
         },
         {
             "id": 3,
             "title": "Employee Learning Management System (SaaS)",
             "technologies": ["Angular", ".NET Core WebAPI", "PostgreSQL", "EF Core"],
-            "description": "Built scalable modules for course management, training tracking, and reading time analytics—enhancing learning insights by 30%. Architected a multi-tenant system ensuring secure company-wise data isolation. Reduced API calls and improved backend performance by 5% through query optimization. Added Angular Inline Web Workers to process complex tasks in the background, reducing UI freezing by 10%. Followed Agile/Scrum methodologies with 90% on-time sprint completion."
+            "description": [
+                "Built scalable modules for course management, training tracking, and reading time analytics, enhancing learning insights by 30%.",
+                "Architected multi-tenant architecture ensuring company-wise data isolation and security.",
+                "Reduced API calls and improved backend performance by 5% through query optimization and logic refinement.",
+                "Added Angular Inline Web Workers to handle complex tasks in the background, reducing UI freezing by 10%.",
+                "Adopted Agile/Scrum methodology for iterative delivery, contributing to 90% on-time sprint completion."
+            ]
         }
     ],
     "education": [{
