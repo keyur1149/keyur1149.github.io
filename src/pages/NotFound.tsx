@@ -28,6 +28,7 @@ const NotFound = () => {
           onClick={() => navigate("/")}
           className="hover-scale animate-fade-in"
           size="lg"
+          variant="default"
         >
           Go Back Home
         </Button>
