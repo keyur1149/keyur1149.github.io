@@ -19,6 +19,7 @@ const Navigation = () => {
   const endNavItems = [
     { name: 'Projects', path: '/projects' },
     { name: 'Experience', path: '/experience' },
+    { name: 'Certifications', path: '/certifications' },
     { name: 'Contact', path: '/contact' },
   ];
 

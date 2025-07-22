@@ -12,6 +12,7 @@ import Services from "./components/Services";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
+import Certifications from "./components/Certifications";
 import NotFound from "./pages/NotFound";
 import portfolioData from "./data/portfolio.json";
 
@@ -32,6 +33,7 @@ const App = () => (
               {portfolioData.showServices && <Route path="/services" element={<Services />} />}
               <Route path="/projects" element={<Projects />} />
               <Route path="/experience" element={<Experience />} />
+              <Route path="/certifications" element={<Certifications />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>

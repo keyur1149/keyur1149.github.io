@@ -8,7 +8,8 @@
         "email": "keyurpatel1149@gmail.com",
         "phone": "+91 8141351199",
         "location": "Ahmedabad, Gujarat, India",
-        "linkedinUrl": "https://www.linkedin.com/in/keyurjivani"
+        "linkedinUrl": "https://www.linkedin.com/in/keyurjivani",
+        "resumeUrl": "https://drive.google.com/file/d/YOUR_GOOGLE_DRIVE_FILE_ID/view?usp=sharing"
     },
     "showServices": false,
     "skills": {
@@ -107,6 +108,35 @@
         "startDate": "2020",
         "endDate": "2024"
     }],
+    "certifications": [
+        {
+            "id": 1,
+            "name": "AWS Certified Solutions Architect",
+            "issuer": "Amazon Web Services",
+            "issueDate": "2024",
+            "credentialId": "AWS-SAA-2024-001",
+            "validUntil": "2027",
+            "skills": ["AWS", "Cloud Architecture", "Solutions Design"]
+        },
+        {
+            "id": 2,
+            "name": "Microsoft Azure Fundamentals",
+            "issuer": "Microsoft",
+            "issueDate": "2023",
+            "credentialId": "AZ-900-2023-002",
+            "validUntil": "2026",
+            "skills": ["Azure", "Cloud Computing", "DevOps"]
+        },
+        {
+            "id": 3,
+            "name": "Angular Certified Developer",
+            "issuer": "Angular",
+            "issueDate": "2023",
+            "credentialId": "ACD-2023-003",
+            "validUntil": "2025",
+            "skills": ["Angular", "TypeScript", "Frontend Development"]
+        }
+    ],
     "social": {
         "github": "https://github.com/keyur1149",
         "linkedin": "https://www.linkedin.com/in/keyurjivani",
