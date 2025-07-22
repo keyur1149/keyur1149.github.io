@@ -23,7 +23,6 @@ const Certifications = () => {
               <CardHeader>
                 <div className="flex items-start justify-between mb-2">
                   <Award className="h-8 w-8 text-blue-600 dark:text-blue-400" />
-                  <ExternalLink className="h-4 w-4 text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" />
                 </div>
                 <CardTitle className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                   {cert.name}
