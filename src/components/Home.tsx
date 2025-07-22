@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Linkedin, Mail, ArrowRight, Briefcase } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowRight, Briefcase, Download, Eye } from 'lucide-react';
 import portfolioData from '../data/portfolio.json';
 import AnimatedBackground from './AnimatedBackground';
 
@@ -15,6 +15,17 @@ const Home = () => {
 
   const currentBio = showServices ? personal.companyBio : personal.bio;
   const currentTitle = showServices ? "IT Solutions & Development" : personal.title;
+  
+  // Helper functions for resume links
+  const getResumeViewUrl = (driveUrl: string) => {
+    const fileId = driveUrl.match(/\/d\/([a-zA-Z0-9-_]+)/)?.[1];
+    return fileId ? `https://drive.google.com/file/d/${fileId}/view` : driveUrl;
+  };
+
+  const getResumeDownloadUrl = (driveUrl: string) => {
+    const fileId = driveUrl.match(/\/d\/([a-zA-Z0-9-_]+)/)?.[1];
+    return fileId ? `https://drive.google.com/uc?export=download&id=${fileId}` : driveUrl;
+  };
 
   return (
     <div className="min-h-screen pt-16 relative overflow-hidden">
@@ -60,6 +71,28 @@ const Home = () => {
               >
                 Get In Touch
               </Link>
+            </div>
+
+            {/* Resume Download Section */}
+            <div className="flex flex-col sm:flex-row gap-3 mb-8">
+              <a
+                href={getResumeViewUrl(personal.resumeUrl)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-medium rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105"
+              >
+                <Eye className="mr-2" size={16} />
+                View Resume
+              </a>
+              <a
+                href={getResumeDownloadUrl(personal.resumeUrl)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-gray-600 to-gray-700 text-white font-medium rounded-lg hover:from-gray-700 hover:to-gray-800 transition-all duration-300 transform hover:scale-105"
+              >
+                <Download className="mr-2" size={16} />
+                Download CV
+              </a>
             </div>
 
             {/* Social Links */}
