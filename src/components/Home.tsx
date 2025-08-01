@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import { Github, Linkedin, Mail, ArrowRight, Briefcase, Download, Eye } from 'lucide-react';
 import portfolioData from '../data/portfolio.json';
 import AnimatedBackground from './AnimatedBackground';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from './ui/dialog';
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isResumeDialogOpen, setIsResumeDialogOpen] = useState(false);
   const { personal, skills, showServices } = portfolioData;
 
   useEffect(() => {
@@ -25,6 +27,11 @@ const Home = () => {
   const getResumeDownloadUrl = (driveUrl: string) => {
     const fileId = driveUrl.match(/\/d\/([a-zA-Z0-9-_]+)/)?.[1];
     return fileId ? `https://drive.google.com/uc?export=download&id=${fileId}` : driveUrl;
+  };
+
+  const getResumeEmbedUrl = (driveUrl: string) => {
+    const fileId = driveUrl.match(/\/d\/([a-zA-Z0-9-_]+)/)?.[1];
+    return fileId ? `https://drive.google.com/file/d/${fileId}/preview` : driveUrl;
   };
 
   return (
@@ -75,15 +82,26 @@ const Home = () => {
 
             {/* Resume Download Section */}
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
-              <a
-                href={getResumeViewUrl(personal.resumeUrl)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-medium rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105"
-              >
-                <Eye className="mr-2" size={16} />
-                View Resume
-              </a>
+              <Dialog open={isResumeDialogOpen} onOpenChange={setIsResumeDialogOpen}>
+                <DialogTrigger asChild>
+                  <button className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-medium rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 transform hover:scale-105">
+                    <Eye className="mr-2" size={16} />
+                    View Resume
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl w-full h-[80vh]">
+                  <DialogHeader>
+                    <DialogTitle>Resume - {personal.name}</DialogTitle>
+                  </DialogHeader>
+                  <div className="flex-1 w-full h-full">
+                    <iframe
+                      src={getResumeEmbedUrl(personal.resumeUrl)}
+                      className="w-full h-full border-0 rounded-lg"
+                      title="Resume PDF Viewer"
+                    />
+                  </div>
+                </DialogContent>
+              </Dialog>
               <a
                 href={getResumeDownloadUrl(personal.resumeUrl)}
                 target="_blank"
