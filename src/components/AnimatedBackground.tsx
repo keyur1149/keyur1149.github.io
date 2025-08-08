@@ -52,17 +52,17 @@ const AnimatedBackground: React.FC = () => {
     
     switch (type) {
       case 'code':
-        return `${baseStyles} text-blue-600/40 dark:text-blue-400/30`;
+        return `${baseStyles} text-blue-600/30 dark:text-blue-300/40`;
       case 'cloud':
-        return `${baseStyles} text-purple-600/40 dark:text-purple-400/30`;
+        return `${baseStyles} text-purple-600/30 dark:text-purple-300/40`;
       case 'tech':
-        return `${baseStyles} text-emerald-600/40 dark:text-emerald-400/30`;
+        return `${baseStyles} text-emerald-600/30 dark:text-emerald-300/40`;
       case 'sql':
-        return `${baseStyles} text-orange-600/40 dark:text-orange-400/30`;
+        return `${baseStyles} text-orange-600/30 dark:text-orange-300/40`;
       case 'bash':
-        return `${baseStyles} text-pink-600/40 dark:text-pink-400/30`;
+        return `${baseStyles} text-pink-600/30 dark:text-pink-300/40`;
       default:
-        return `${baseStyles} text-gray-600/40 dark:text-gray-400/30`;
+        return `${baseStyles} text-gray-600/30 dark:text-gray-300/40`;
     }
   };
 
@@ -114,7 +114,7 @@ const AnimatedBackground: React.FC = () => {
         />
       </svg>
       
-      {/* Dynamic Floating Elements */}
+      {/* Dynamic Floating Code/Tech Elements with proper contrast */}
       <div className="absolute inset-0 pointer-events-none">
         {floatingElements.map((element) => (
           <div
