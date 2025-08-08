@@ -11,7 +11,7 @@
         "linkedinUrl": "https://www.linkedin.com/in/keyurjivani",
         "resumeUrl": "https://drive.google.com/file/d/1_hO-1tEYKtUoiD87EJYELyh7aOAJ7uS4/view?usp=sharing"
     },
-    "showServices": false,
+    "showServices": true,
     "skills": {
         "Frontend": ["Angular", "TypeScript", "JavaScript"],
         "Backend": ["Node.js", ".Net Core", "C#", "MAUI Hybrid Blazor App"],
