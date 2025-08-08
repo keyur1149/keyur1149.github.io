@@ -1,83 +1,70 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import backgroundContent from '../data/backgroundContent.json';
 
 const AnimatedBackground: React.FC = () => {
-  const techQuotes = [
-    // Programming Logic
-    'if (success) { continue; }',
-    'while (learning) { grow(); }',
-    'try { innovate(); } catch { adapt(); }',
-    'const future = async () => {}',
-    'function deploy() { return success; }',
-    'let experience = [];',
-    'const skills = new Set();',
-    'export default passion;',
-    'import { creativity } from "mind";',
-    'setState({ motivated: true });',
+  const [floatingElements, setFloatingElements] = useState<Array<{
+    id: string;
+    content: string;
+    type: 'code' | 'cloud' | 'tech' | 'sql' | 'bash';
+    x: number;
+    y: number;
+    delay: number;
+    duration: number;
+    rotation: number;
+  }>>([]);
+
+  useEffect(() => {
+    const generateFloatingElements = () => {
+      const allContent = [
+        ...backgroundContent.codeSnippets.map(item => ({ content: item, type: 'code' as const })),
+        ...backgroundContent.cloudConcepts.map(item => ({ content: item, type: 'cloud' as const })),
+        ...backgroundContent.technologies.map(item => ({ content: item, type: 'tech' as const })),
+        ...backgroundContent.sqlQueries.map(item => ({ content: item, type: 'sql' as const })),
+        ...backgroundContent.bashCommands.map(item => ({ content: item, type: 'bash' as const }))
+      ];
+
+      const elements = Array.from({ length: 25 }, (_, i) => {
+        const randomContent = allContent[Math.floor(Math.random() * allContent.length)];
+        return {
+          id: `element-${i}`,
+          content: randomContent.content,
+          type: randomContent.type,
+          x: Math.random() * 95,
+          y: Math.random() * 95,
+          delay: Math.random() * 15,
+          duration: 8 + Math.random() * 12,
+          rotation: Math.random() * 20 - 10
+        };
+      });
+
+      setFloatingElements(elements);
+    };
+
+    generateFloatingElements();
     
-    // AWS Services
-    'AWS Lambda',
-    'EC2 Instance',
-    'S3 Bucket',
-    'CloudFormation',
-    'API Gateway',
-    'DynamoDB',
-    'CloudWatch',
-    'VPC Network',
-    'IAM Roles',
-    'Route 53',
-    'ECS Container',
-    'RDS Database',
-    'ElastiCache',
-    'SNS Topics',
+    // Regenerate elements periodically for dynamic effect
+    const interval = setInterval(generateFloatingElements, 30000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const getElementStyles = (type: string) => {
+    const baseStyles = "absolute text-xs sm:text-sm font-mono whitespace-nowrap animate-code-float select-none pointer-events-none";
     
-    // Technologies & Tools
-    'TypeScript',
-    'React.useState()',
-    'Docker Container',
-    'Kubernetes Pod',
-    'GraphQL Query',
-    'Node.js Server',
-    'PostgreSQL',
-    'MongoDB Atlas',
-    'Redis Cache',
-    'Nginx Proxy',
-    'Jest Testing',
-    'GitHub Actions',
-    'CI/CD Pipeline',
-    'Microservices',
-    
-    // Code Commands
-    'npm install success',
-    'git commit -m "innovation"',
-    'docker run --rm app',
-    'kubectl apply -f future',
-    'yarn build production',
-    'terraform apply',
-    'ansible-playbook deploy',
-    'helm install release',
-    
-    // SQL & Database
-    'SELECT * FROM opportunities',
-    'INSERT INTO future VALUES',
-    'UPDATE skills SET level = "expert"',
-    'CREATE TABLE innovations',
-    'COMMIT TRANSACTION',
-    'INDEX ON performance',
-    'JOIN experiences ON success',
-    'WHERE passion = true',
-    
-    // Development Concepts
-    'RESTful API',
-    'Serverless Functions',
-    'Event-Driven Architecture',
-    'Domain-Driven Design',
-    'Test-Driven Development',
-    'Continuous Integration',
-    'Infrastructure as Code',
-    'Blue-Green Deployment',
-    'Circuit Breaker Pattern',
-    'API Rate Limiting'
-  ];
+    switch (type) {
+      case 'code':
+        return `${baseStyles} text-blue-600/40 dark:text-blue-400/30`;
+      case 'cloud':
+        return `${baseStyles} text-purple-600/40 dark:text-purple-400/30`;
+      case 'tech':
+        return `${baseStyles} text-emerald-600/40 dark:text-emerald-400/30`;
+      case 'sql':
+        return `${baseStyles} text-orange-600/40 dark:text-orange-400/30`;
+      case 'bash':
+        return `${baseStyles} text-pink-600/40 dark:text-pink-400/30`;
+      default:
+        return `${baseStyles} text-gray-600/40 dark:text-gray-400/30`;
+    }
+  };
 
   return (
     <div className="absolute inset-0 overflow-hidden -z-10">
@@ -127,21 +114,21 @@ const AnimatedBackground: React.FC = () => {
         />
       </svg>
       
-      {/* Floating Code Snippets */}
+      {/* Dynamic Floating Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        {techQuotes.slice(0, 15).map((snippet, i) => (
+        {floatingElements.map((element) => (
           <div
-            key={`code-${i}`}
-            className="absolute text-xs sm:text-sm font-mono text-blue-600/40 dark:text-blue-400/30 whitespace-nowrap animate-code-float select-none"
+            key={element.id}
+            className={getElementStyles(element.type)}
             style={{
-              left: `${Math.random() * 90}%`,
-              top: `${Math.random() * 90}%`,
-              animationDelay: `${Math.random() * 10}s`,
-              animationDuration: `${8 + Math.random() * 6}s`,
-              transform: `rotate(${Math.random() * 20 - 10}deg)`,
+              left: `${element.x}%`,
+              top: `${element.y}%`,
+              animationDelay: `${element.delay}s`,
+              animationDuration: `${element.duration}s`,
+              transform: `rotate(${element.rotation}deg)`,
             }}
           >
-            {snippet}
+            {element.content}
           </div>
         ))}
       </div>
