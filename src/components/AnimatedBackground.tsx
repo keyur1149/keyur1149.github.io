@@ -67,7 +67,7 @@ const AnimatedBackground: React.FC = () => {
   };
 
   return (
-    <div className="absolute inset-0 overflow-hidden -z-10">
+    <div className="absolute inset-0 overflow-hidden z-0">
       {/* Animated Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-100 dark:from-gray-900 dark:via-blue-900/20 dark:to-gray-800 animate-gradient-shift"></div>
       
