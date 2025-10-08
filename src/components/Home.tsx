@@ -142,13 +142,19 @@ const Home = () => {
 
           {/* Image */}
           <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <div className="relative">
+            <div className="relative group perspective-1000">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl blur-2xl opacity-20 animate-pulse"></div>
-              <img
-                src={personal.image}
-                alt={personal.name}
-                className="relative w-full max-w-md mx-auto rounded-3xl shadow-2xl"
-              />
+              <div className="relative transform transition-all duration-700 hover:scale-105 hover:rotate-2 group-hover:shadow-2xl">
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-3xl blur opacity-30 group-hover:opacity-50 transition duration-700 animate-pulse"></div>
+                <img
+                  src={personal.image}
+                  alt={personal.name}
+                  className="relative w-full max-w-md mx-auto rounded-3xl shadow-2xl transform transition-all duration-700 group-hover:scale-[1.02]"
+                  style={{
+                    animation: 'float 6s ease-in-out infinite'
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>

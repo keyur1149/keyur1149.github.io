@@ -22,13 +22,19 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Profile Image */}
             <div className="lg:col-span-1 space-y-6">
-              <div className="relative">
-                <img
-                  src={personal.image}
-                  alt={personal.name}
-                  className="w-full rounded-2xl shadow-2xl"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent rounded-2xl"></div>
+              <div className="relative group">
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-500"></div>
+                <div className="relative transform transition-all duration-500 hover:scale-[1.02] hover:-rotate-1">
+                  <img
+                    src={personal.image}
+                    alt={personal.name}
+                    className="w-full rounded-2xl shadow-2xl"
+                    style={{
+                      animation: 'float 5s ease-in-out infinite'
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent rounded-2xl"></div>
+                </div>
               </div>
               
               {/* Experience Highlight */}
